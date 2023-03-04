@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevaReceta">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/ll_registro_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/txtCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="Nueva Receta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de Receta:" />
+
+            <EditText
+                android:id="@+id/txtNombreReceta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Para cuántas personas?" />
+
+            <EditText
+                android:id="@+id/txtPorciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ej. 4"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ingredientes:" />
+
+
+            <EditText
+                android:id="@+id/txtIngredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Ej. 20 gramos de harina"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/btnIngredienteNuevo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Añadir nuevo ingrediente" />
+
+            <TextView
+                android:id="@+id/txtMostrarIngredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Aquí aparecerán los ingredientes" />
+
+            <TextView
+                android:id="@+id/txtEnsalada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Instrucciones:" />
+
+            <EditText
+                android:id="@+id/txtInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:scrollbars="horizontal|vertical" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView7"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="Otros sitios:" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/txtSitios"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:ems="10"-->
+<!--                android:gravity="start|top"-->
+<!--                android:hint="Escribir URL..."-->
+<!--                android:inputType="textMultiLine" />-->
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Categorías" />
+
+            <Spinner
+                android:id="@+id/spCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtImagenReceta"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="20dp"
+                android:text="Imagen de la receta"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+<!--            <ImageView-->
+
+<!--                android:id="@+id/imagenRegistro"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                app:srcCompat="@drawable/ic_launcher_background" />-->
+
+            <EditText
+                android:id="@+id/txtURLimagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresa URL de la imagen"
+                android:inputType="textPersonName" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <RadioButton
+                    android:id="@+id/rdOpcionVisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Agregar URL de imagen" />
+
+                <RadioButton
+                    android:id="@+id/rdOpcionInvisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No agregar URL de imagen" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAceptarRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aceptar ajuste de imagen" />
+
+            <Button
+                android:id="@+id/btnRegistrarReceta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="Registrar receta" />
+
+            <Button
+                android:id="@+id/btnSalirRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Salir"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
